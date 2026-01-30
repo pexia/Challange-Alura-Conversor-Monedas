@@ -1,181 +1,148 @@
 # Challange-Alura-Conversor-Monedas
 
-🪙 Conversor de Moneda
+📌 Descripción
 
-Este proyecto es una aplicación de consola desarrollada en Java que permite convertir valores entre distintas monedas utilizando tasas de cambio obtenidas desde la API de ExchangeRate.
+Conversor de Moneda es una aplicación de consola desarrollada en Java que permite convertir valores entre distintas monedas utilizando tasas de cambio obtenidas desde la API de ExchangeRate.
 
-La app guía al usuario mediante un menú interactivo, permitiéndole:
+El usuario puede:
 
 Seleccionar moneda de origen.
 
 Seleccionar moneda de destino.
 
 Ingresar un monto.
-
+    
 Obtener el valor convertido en tiempo real.
+
 
 
 🚀 Funcionalidades
 
-Conversión entre monedas. 
+✅ Conversión entre monedas.
 
-Consulta en tiempo real a la API ExchangeRate.
+✅ Consulta en tiempo real a la API.
 
-Menú interactivo por consola.
+✅ Menú interactivo por consola.
 
-Validación básica de entradas.
+✅ Validación básica de entradas.
 
-🛠 Tecnologías utilizadas
+✅ Código organizado por clases.
+
+🛠 Tecnologías
 
 Java
-API ExchangeRate
+
 HttpClient
+
+ExchangeRate API
+
 Programación Orientada a Objetos
 
+📁 Estructura del proyecto
+com.pexdev.conversor
+│
+├── Main.java
+├── Menu.java
+├── Moneda.java
+├── ConsultaMoneda.java
+└── ConversorDatos.java
 
-▶️ Ejecución del proyecto
+▶️ Cómo ejecutar
 
-Descargar o clonar el proyecto.
+Cloná o descargá el proyecto.
 
-Abrirlo en tu IDE.
+Abrilo en tu IDE.
 
-Ejecutar la clase:
+Ejecutá la clase:
 
 Main.java
 
-Seguir las instrucciones que aparecen en la consola.
 
+Seguí las instrucciones en consola.
 
 🔑 Configuración de la API Key
 
-La aplicación utiliza la API de ExchangeRate:
+La app utiliza la API de ExchangeRate:
 
 👉 https://www.exchangerate-api.com/
 
-Para que funcione correctamente debes usar tu propia API Key.
+1️⃣ Obtener tu API Key
 
-📌 Paso 1 – Obtener tu API Key
-
-Ingresar a:
+Entrar en
 https://www.exchangerate-api.com/
 
-Registrarse gratuitamente.
+Registrarse.
 
-Copiar tu API Key personal.
+Copiar la API Key personal.
 
-📌 Paso 2 – Insertar la API Key en el proyecto
+2️⃣ Insertar la API Key
 
-Abrir la clase:
+Abrí el archivo:
 
 ConsultaMoneda.java
 
 
-Dentro encontrarás esta línea:
+Buscá esta línea:
 
 private final String apiKey = "8bc8b2a0c9caa761b44ff0e3"; //Escriba aqui su ApiKey de ExchangeRate
 
-
-Reemplázala por tu propia clave:
+Reemplazala por:
 
 private final String apiKey = "TU_API_KEY_AQUI";
 
-
-Luego la URL base se completa internamente con:
-
-https://v6.exchangerate-api.com/v6/
-
-
-⚠️ Importante:
-No compartas tu API Key en repositorios públicos.
+⚠️ No publiques tu API Key en repositorios públicos.
 
 💱 Modificar las monedas disponibles
 
-Las monedas que ofrece la aplicación están hardcodeadas.
+Las monedas están hardcodeadas en el menú.
 
-Puedes consultar las monedas válidas en la documentación oficial de la API:
+Podés consultar las soportadas en:
 
 👉 https://www.exchangerate-api.com/docs/supported-currencies
 
-📌 Paso 1 – Elegir monedas válidas
+1️⃣ Elegir monedas
 
-En la web encontrarás códigos como:
+Ejemplos válidos:
 
 USD - United States Dollar  
 ARS - Argentine Peso  
 EUR - Euro  
+BRL - Brazilian Real  
 JPY - Japanese Yen  
-BRL - Brazilian Real
 
+2️⃣ Editar la lista
 
-Debes usar siempre los códigos de 3 letras.
-
-📌 Paso 2 – Modificar la lista de monedas
-
-Abrí la clase:
+Abrí:
 
 Menu.java
 
 
-Dentro encontrarás el arreglo:
+Encontrarás:
 
 private final String[] listaMonedas = {
-"ARS",
-"USD",
-...
+    "ARS",
+    "USD"
 };
 
 
-Podés reemplazar o agregar monedas, por ejemplo:
+Podés modificarla así:
 
 private final String[] listaMonedas = {
-"USD",
-"EUR",
-"ARS",
-"BRL",
-"JPY"
+    "USD",
+    "EUR",
+    "ARS",
+    "BRL",
+    "JPY"
 };
 
 
-Estas serán las monedas que el usuario verá en el menú.
+Estas monedas se mostrarán automáticamente en el menú.
 
-📌 Paso 3 – Guardar y ejecutar
+3️⃣ Ejecutar nuevamente
 
-Una vez modificada la lista:
+Guardá los cambios y ejecutá Main.java.
 
-Guardar el archivo.
-
-Ejecutar nuevamente Main.java.
-
-La app mostrará automáticamente las nuevas monedas.
-
-🎓 Nota académica
-
-Este proyecto se desarrolla con fines educativos.
-
-Por el momento:
-
-La API Key se define manualmente.
-
-Las monedas están hardcodeadas.
-
-No se usa configuración externa.
-
-No se implementa persistencia.
-
-El objetivo es comprender primero la lógica base antes de escalar a implementaciones más complejas.
-
-📌 Posibles mejoras futuras
-
-Historial de conversiones.
-
-Cache de tasas.
-
-Interfaz gráfica.
-
-Configuración externa.
-
-Manejo avanzado de errores.
 
 👤 Autor
 
-Proyecto desarrollado con fines académicos por peripe.
+Desarrollado con fines académicos por pexiaDev.
