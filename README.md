@@ -38,14 +38,6 @@ ExchangeRate API
 
 Programación Orientada a Objetos
 
-📁 Estructura del proyecto
-com.pexdev.conversor
-│
-├── Main.java
-├── Menu.java
-├── Moneda.java
-├── ConsultaMoneda.java
-└── ConversorDatos.java
 
 ▶️ Cómo ejecutar
 
@@ -146,3 +138,4 @@ Guardá los cambios y ejecutá Main.java.
 👤 Autor
 
 Desarrollado con fines académicos por pexiaDev.
+
